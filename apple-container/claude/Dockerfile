@@ -31,4 +31,5 @@ ENV PATH="/home/ubuntu/.local/bin:${PATH}"
 WORKDIR /home/ubuntu/projects
 
 RUN curl -fsSL https://claude.ai/install.sh | bash && \
-    claude --version
+    claude --version && \
+    echo "export CLAUDE_CODE_DISABLE_MOUSE_CLICKS=1" >> /home/ubuntu/.bash_profile
